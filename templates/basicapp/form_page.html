@@ -12,7 +12,9 @@
 <div class="container">
     <form method="POST">
 		# Is everything secure?
+        {% csrf_token %}
         {{ form.as_p }}
+
         <input type="submit" class="btn btn-primary" value="Submit">
     </form>
 </div>
