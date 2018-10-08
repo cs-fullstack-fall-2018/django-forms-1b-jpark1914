@@ -14,6 +14,5 @@ def form_name_view(request):
         if form.is_valid():
             # Do something
             print("VALIDATION SUCCESSFUL")
-            print("Favorite Website Entered: "+form.cleaned_data['url'])
-
+            print(form.cleaned_data.get('url'), ": is your favorite website")
     return render(request, 'basicapp/form_page.html', {'form': form})
